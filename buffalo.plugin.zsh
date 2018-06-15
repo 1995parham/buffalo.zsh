@@ -19,12 +19,14 @@ function _buffalo() {
 		help\:'Help about any command'
 		info\:'Prints off diagnostic information useful for debugging'
 		new\:'Creates new Buffalo application'
+		routes\:'Print out all defined routes'
 		setup\:'Setups a newly created, or recently checked out application.'
 		task\:'Runs your grift tasks'
 		test\:'Runs the tests for your Buffalo app'
 		update\:'will attempt to upgrade a Buffalo application to newer version'
 		version\:'Print the version number of buffalo'))"
 	_arguments -C \
+		{-h,--help}"[help for buffalo]"\
 		"1:command:$cmds"\
 		"*::arg:->args"
 
@@ -69,6 +71,27 @@ function _buffalo_build() {
 }
 
 function _buffalo_db() {
+	local line
+
+	cmds="((create\:'Creates database for you'
+		destroy\:'Allows to destroy generated code'
+		drop\:'Drop database for you'
+		generate\:''
+		migrate\:'Runs migrations against your database'
+		schema\:'Tools for working with your database scheam'))"
+	_arguments -C \
+		"1:command:$cmds"\
+		{-c=,--config=}"[The configuration file you would like to use]:string"\
+		{-d,--debug}"[Use debug/verbose mode]"\
+		{-e=,--env=}"[]:string"\
+		{-h,--help}"[help for db]"\
+		{-p=,--path=}"[Path to the migrations folder (default \\\"./migrations\\\")]:string"\
+		{-v,--version}"[Show version information]"
+		"*::arg:->args"
+
+	case $line[1] in
+	esac
+
 }
 
 function _buffalo_destroy() {
