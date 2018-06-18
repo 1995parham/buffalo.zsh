@@ -1,5 +1,5 @@
 # buffalo.zsh
-Buffalo web framework zsh plugin
+[Buffalo web framework](https://gobuffalo.io/) zsh plugin
 
 ## Usage
 
