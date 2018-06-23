@@ -13,11 +13,11 @@ Add `antigen bundle 1995parham/buffalo.zsh` to your `~/.zshrc`.
 
 * Clone the repository inside your oh-my-zsh repo:
 
-        git clone https://github.com/1995parham/buffalo.zsh ~/.oh-my-zsh/custom/plugins/buffalo.zsh
+        git clone https://github.com/1995parham/buffalo.zsh ~/.oh-my-zsh/custom/plugins/buffalo
 
 * Enable it in your `.zshrc` by adding it to your plugin list and reloading the completion:
 
-        plugins=(… buffalo.zsh)
+        plugins=(… buffalo)
         autoload -U compinit && compinit
 
 ### Manual installation
