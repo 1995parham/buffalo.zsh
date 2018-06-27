@@ -8,7 +8,7 @@
 # [] Created By : Parham Alvani <parham.alvani@gmail.com>
 # =======================================
 
-function _buffalo() {
+_buffalo() {
 	local line
 
 	cmds="((build\:'Builds a Buffalo binary, including bundling of assets (packr & webpack)'
@@ -55,7 +55,7 @@ function _buffalo() {
 	esac
 }
 
-function _buffalo_build() {
+_buffalo_build() {
 	_arguments \
 		{-c,--compress}"[compress static files in the binrary (default true)]"\
 		{--debug,-d}"[print debugging informantion]"\
@@ -70,7 +70,7 @@ function _buffalo_build() {
 		{-t=,--tags=}"[compile with specific build tags]:string:( )"
 }
 
-function _buffalo_db() {
+_buffalo_db() {
 	local line
 
 	cmds="((create\:'Creates database for you'
@@ -94,13 +94,13 @@ function _buffalo_db() {
 
 }
 
-function _buffalo_destroy() {
+_buffalo_destroy() {
 }
 
-function _buffalo_dev() {
+_buffalo_dev() {
 }
 
-function _buffalo_generate() {
+_buffalo_generate() {
 	local line
 
 	cmds="((action\:'Generates new action(s)'
@@ -120,7 +120,7 @@ function _buffalo_generate() {
 
 }
 
-function _buffalo_generate_action() {
+_buffalo_generate_action() {
 	_arguments \
 		"-h[help for action]"\
 		"-m[change the HTTP method for the generate action(s) (default GET)]"\
@@ -130,12 +130,12 @@ function _buffalo_generate_action() {
 }
 
 
-function _buffalo_help() {
+_buffalo_help() {
 	_arguments \
 		"1:command:(build db destroy dev generate help info new routes setup task test update version)"
 }
 
-function _buffalo_new() {
+_buffalo_new() {
 	_arguments \
 		"1:name:( )"\
 		"--api[skip all front-end code and configure for an API server]"\
