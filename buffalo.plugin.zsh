@@ -86,7 +86,7 @@ _buffalo_db() {
 		{-e=,--env=}"[]:string"\
 		{-h,--help}"[help for db]"\
 		{-p=,--path=}"[Path to the migrations folder (default \\\"./migrations\\\")]:string"\
-		{-v,--version}"[Show version information]"
+		{-v,--version}"[Show version information]"\
 		"*::arg:->args"
 
 	case $line[1] in
